@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 19.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SQL firsrt practice", "SQL firsrt practice.ssmssqlproj", "{888BBD6F-4155-4ABE-B03E-022B9E72C0BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{888BBD6F-4155-4ABE-B03E-022B9E72C0BC}.Default|Default.ActiveCfg = Default
+		{221D2DD1-BD53-4BF6-8113-9E34F02F6768}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFF22D51-F1CE-4B17-8AF1-BED7F97797A9}
+	EndGlobalSection
+EndGlobal
