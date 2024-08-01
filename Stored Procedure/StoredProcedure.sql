@@ -1,0 +1,2 @@
+--Store Procedure
+--Conjunto de instrucciones, almacenado en SQL server y se ejecurata cuando lo llames
