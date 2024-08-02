@@ -10,7 +10,7 @@ BEGIN--Inicio de lo que se debere ejecutar dentro del Begin y END siempre que te
 	SELECT * FROM paciente WHERE idpaciente=@idpaciente
 	PRINT  @idturno
 END
-ELSE
+ELSE--Segunda condicion que se ejecutara en caso que el IF sea falsa
 BEGIN
 	PRINT 'No se cumplio la funcion'
 END
