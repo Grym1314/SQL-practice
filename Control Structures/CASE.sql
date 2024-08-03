@@ -12,4 +12,5 @@ Print @resultado
 SELECT *,(CASE WHEN idEstado=1 THEN'Verde'
 			   WHEN idEstado=2 THEN'Rojo'
                WHEN idestado=3 THEN'Azul'
+			   ELSE 'Gris'
 			   END) AS Codigo FROM Turno
