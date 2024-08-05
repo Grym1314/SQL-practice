@@ -1,15 +1,15 @@
 
 ALTER PROC Alta_Turnos( 
-	@fechaturno CHAR(14),--20190215 12:00
-	@observacion observacion=' ',
+	@fechaturno CHAR(14),--20190215 12:
 	@idPaciente paciente,
-	@idMedico medico
+	@idMedico medico,
+	@observacion observacion=' '
 	)
 AS
 IF NOT EXISTS(SELECT TOP 1 idTurno FROM Turno WHERE fechaTurno=@fechaturno)
 	BEGIN
 		INSERT INTO Turno(fechaTurno,idEstado,observacion)
-		VALUES (@fechaturno,0,@observacion)
+		VALUES (@fechaturno,2,@observacion)
 
 		DECLARE @auxIdTurno turno
 		SET @auxIdTurno = @@IDENTITY--Ultimo valor insertado dentro de un campo con el valor IDENTITY ON
@@ -25,5 +25,4 @@ ELSE
 		PRINT 'El turno ya existe'
 		RETURN
 	END
-
 
