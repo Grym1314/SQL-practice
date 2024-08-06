@@ -1,0 +1,1 @@
+EXEC Alta_Medico 'Gerardo','Martinez',1,'Medico residente'

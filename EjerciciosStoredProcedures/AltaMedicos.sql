@@ -20,7 +20,7 @@ IF NOT EXISTS(SELECT TOP 1 idMedico FROM Medico WHERE nombre=@nombreMedico and a
 		INSERT INTO MedicoEspecialidad(idMedico,idEspecialidad,descripcion)
 		VALUES (@auxIdMedico,@idEspecialidad,@descripcion)
 
-		PRINT 'El Medico y sus especialidad han sido registrados'
+		PRINT 'El Medico y su especialidad han sido registrados'
 		RETURN
 	END
 ELSE
@@ -28,3 +28,4 @@ ELSE
 		PRINT 'El turno ya existe'
 		RETURN
 	END
+	
