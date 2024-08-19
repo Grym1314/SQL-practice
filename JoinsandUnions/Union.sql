@@ -1,0 +1,1 @@
+--Diferencia entre la clausula INNER con la clausula UNION, UNION nos permite unir dos consultas diferentes 
