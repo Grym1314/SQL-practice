@@ -3,17 +3,29 @@ CREATE PROC SEL_HistoriaPaciente(
 
 AS
 SET NOCOUNT ON
-
-	SELECT * FROM paciente P
-	INNER JOIN HistoriaPaciente HP
-	ON HP.idPaciente = P.idPaciente
-	INNER JOIN historia H
-	ON H.idHistoria = HP.idHistoria
-	INNER JOIN MedicoEspecialidad ME
-	ON ME.idMedico = HP.idMedico
-	INNER JOIN Medico M
-	ON M.idMedico = ME.idMedico
-	WHERE P.idPaciente = @idpaciente
+IF EXISTS(SELECT * FROM paciente P
+			INNER JOIN HistoriaPaciente HP
+			ON HP.idPaciente = P.idPaciente
+			INNER JOIN historia H
+			ON H.idHistoria = HP.idHistoria
+			INNER JOIN MedicoEspecialidad ME
+			ON ME.idMedico = HP.idMedico
+			INNER JOIN Medico M
+			ON M.idMedico = ME.idMedico
+			WHERE P.idPaciente = @idpaciente
+			)
+			SELECT * FROM paciente P
+			INNER JOIN HistoriaPaciente HP
+			ON HP.idPaciente = P.idPaciente
+			INNER JOIN historia H
+			ON H.idHistoria = HP.idHistoria
+			INNER JOIN MedicoEspecialidad ME
+			ON ME.idMedico = HP.idMedico
+			INNER JOIN Medico M
+			ON M.idMedico = ME.idMedico
+			WHERE P.idPaciente = @idpaciente
+ELSE	
+		PRINT 'No existe historia clinica'
 
 --Pruebas y ejecuciones
 EXEC SEL_HistoriaPaciente 6
